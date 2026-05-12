@@ -576,7 +576,7 @@
                     cursor: "pointer", border: `2px solid ${color}`, whiteSpace: "nowrap", flexShrink: 0,
                     background: isActive ? color : "white",
                     color: isActive ? "white" : color }}>
-                  {cat ? `${cat.emoji} ${cat.label}` : `All (${parkItems.length})`}
+                  {cat ? cat.label : `All (${parkItems.length})`}
                 </button>
               );
             })}
@@ -787,7 +787,8 @@
             <p style={{ color: "#aaa", fontSize: 14 }}>Every snack, bite, and sip you want to try across both parks.</p>
             <div style={{ display: "flex", gap: 12, marginTop: 18, background: "white", borderRadius: 40,
                 padding: "10px 20px", boxShadow: "0 2px 14px rgba(0,0,0,0.07)", fontSize: 12, fontWeight: 600,
-                color: "#777", overflowX: "auto", whiteSpace: "nowrap", maxWidth: "100%" }}>
+                color: "#777", overflowX: "auto", whiteSpace: "nowrap", maxWidth: "100%",
+                justifyContent: "center", alignItems: "center" }}>
               <span style={{ flexShrink: 0 }}><span style={{ color: "#c0392b" }}>●</span> DL: {items.filter(i=>i.park==="disneyland"&&i.tried).length}/{items.filter(i=>i.park==="disneyland").length}</span>
               <span style={{ color: "#e0e0e0", flexShrink: 0 }}>|</span>
               <span style={{ flexShrink: 0 }}><span style={{ color: "#2980b9" }}>●</span> DCA: {items.filter(i=>i.park==="california_adventure"&&i.tried).length}/{items.filter(i=>i.park==="california_adventure").length}</span>
