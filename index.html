@@ -796,10 +796,35 @@
               <span style={{ flexShrink: 0 }}>Total: {totalTried}/{items.length}</span>
             </div>
           </div>
-          <ParkSection parkKey="disneyland"           items={items}
-            onAdd={handleAdd} onEdit={handleEdit} onDelete={handleDelete} onToggleTried={handleToggleTried} />
-          <ParkSection parkKey="california_adventure" items={items}
-            onAdd={handleAdd} onEdit={handleEdit} onDelete={handleDelete} onToggleTried={handleToggleTried} />
+          <div id="disneyland-section">
+            <ParkSection parkKey="disneyland"           items={items}
+              onAdd={handleAdd} onEdit={handleEdit} onDelete={handleDelete} onToggleTried={handleToggleTried} />
+          </div>
+          <div id="dca-section">
+            <ParkSection parkKey="california_adventure" items={items}
+              onAdd={handleAdd} onEdit={handleEdit} onDelete={handleDelete} onToggleTried={handleToggleTried} />
+          </div>
+
+          {/* Floating park nav buttons */}
+          <div style={{ position: "fixed", bottom: 24, left: 20, zIndex: 9998,
+              display: "flex", flexDirection: "column", gap: 8 }}>
+            <button
+              onClick={() => document.getElementById("disneyland-section").scrollIntoView({ behavior: "smooth" })}
+              style={{ background: "#c0392b", color: "white", border: "none", borderRadius: 12,
+                padding: "10px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.25)", whiteSpace: "nowrap",
+                display: "flex", alignItems: "center", gap: 6 }}>
+              🏰 Disneyland
+            </button>
+            <button
+              onClick={() => document.getElementById("dca-section").scrollIntoView({ behavior: "smooth" })}
+              style={{ background: "#2980b9", color: "white", border: "none", borderRadius: 12,
+                padding: "10px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.25)", whiteSpace: "nowrap",
+                display: "flex", alignItems: "center", gap: 6 }}>
+              🎡 DCA
+            </button>
+          </div>
         </div>
       );
     }
