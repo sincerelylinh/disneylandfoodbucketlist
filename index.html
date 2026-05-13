@@ -806,23 +806,23 @@
           </div>
 
           {/* Floating park nav buttons */}
-          <div style={{ position: "fixed", bottom: 24, left: 20, zIndex: 9998,
-              display: "flex", flexDirection: "column", gap: 8 }}>
+          <div style={{ position: "fixed", bottom: 0, right: 0, zIndex: 9998,
+              display: "flex", flexDirection: "column" }}>
             <button
               onClick={() => document.getElementById("disneyland-section").scrollIntoView({ behavior: "smooth" })}
-              style={{ background: "#c0392b", color: "white", border: "none", borderRadius: 12,
-                padding: "10px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.25)", whiteSpace: "nowrap",
-                display: "flex", alignItems: "center", gap: 6 }}>
-              🏰 Disneyland
+              style={{ background: "rgba(0,0,0,0.18)", color: "white", border: "none",
+                borderTopLeftRadius: 10, borderTopRightRadius: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                padding: "8px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
+                backdropFilter: "blur(6px)", whiteSpace: "nowrap" }}>
+              DL
             </button>
             <button
               onClick={() => document.getElementById("dca-section").scrollIntoView({ behavior: "smooth" })}
-              style={{ background: "#2980b9", color: "white", border: "none", borderRadius: 12,
-                padding: "10px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.25)", whiteSpace: "nowrap",
-                display: "flex", alignItems: "center", gap: 6 }}>
-              🎡 DCA
+              style={{ background: "rgba(0,0,0,0.18)", color: "white", border: "none",
+                borderTopLeftRadius: 0, borderTopRightRadius: 0, borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
+                padding: "8px 14px", fontSize: 12, fontWeight: 700, cursor: "pointer",
+                backdropFilter: "blur(6px)", whiteSpace: "nowrap", borderTop: "1px solid rgba(255,255,255,0.15)" }}>
+              DCA
             </button>
           </div>
         </div>
